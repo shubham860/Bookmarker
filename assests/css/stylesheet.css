@@ -38,3 +38,13 @@ button{
   margin-left:230px;
 
 }
+
+#bookmarksResults{
+  opacity: 0.70;
+  filter: alpha(opacity=70);
+}
+
+#bookmarksResults:hover {
+    opacity: 1.0;
+    filter: alpha(opacity=100);
+}
