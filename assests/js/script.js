@@ -9,7 +9,7 @@ document.getElementById('btn').addEventListener('click',saveBookmark);
 function saveBookmark(e){
 
 var sitename = document.getElementById('ip1').value;
-var siteurl = document.getElementById('ip2').value;
+var siteurl = 'https://'+document.getElementById('ip2').value;
 
 if(!sitename||!siteurl)
 {
