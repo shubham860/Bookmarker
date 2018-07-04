@@ -11,6 +11,12 @@ function saveBookmark(e){
 var sitename = document.getElementById('ip1').value;
 var siteurl = document.getElementById('ip2').value;
 
+if(!sitename||!siteurl)
+{
+  alert("Please Enter The Form");
+  return false;
+}
+
 var bookmark = {
   name : sitename,
   url : siteurl
@@ -68,7 +74,7 @@ function result(){
     var name = bookmarks[i].name;
     var url = bookmarks[i].url;
 
-    bookmarksResults.innerHTML += '<div class="well" style="border-style: solid;border-color:#b38f00;margin-left:87px;height:80px;width:650px;">'+
+    bookmarksResults.innerHTML += '<div class="well" data-aos="zoom-out-down" data-aos-easing="linear" data-aos-duration="1500" style="border-style: solid;border-color:#b38f00;margin-left:87px;height:80px;width:650px;">'+
                                   '<h3 style=" color: white;text-align: center;margin-right: 255px;margin-top:5px">'+name+
                                   ' <a target="_blank" class="btn btn-default" href="'+url+'" style="background-color:#b38f00;margin-left:530px;margin-top:-35px;">Visit</a> ' +
                                   ' <a onclick="deleteBookmark(\''+url+'\')" class="btn btn-default" href="#" style="background-color:white;margin-left:350px;margin-top:-103px;">Delete</a> ' +
